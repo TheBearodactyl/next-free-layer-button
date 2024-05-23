@@ -1,5 +1,6 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/EditorUI.hpp>
+#include <Geode/modify/LevelEditorLayer.hpp>
 
 using namespace geode::prelude;
 
@@ -22,6 +23,8 @@ struct NextFreeLayer : Modify<NextFreeLayer, EditorUI> {
             menu_selector(NextFreeLayer::on_next_free)
         );
 
+        next_free_btn->setID("next-free-layer-button");
+
         layer_btn_mnu->addChild(next_free_btn);
         layer_btn_mnu->setPositionX(new_layr_pos);
         layer_btn_mnu->setLayout(
@@ -40,5 +43,29 @@ struct NextFreeLayer : Modify<NextFreeLayer, EditorUI> {
         this->m_editorLayer->m_currentLayer = next_free;
         this->m_currentLayerLabel->setString(std::to_string(next_free).c_str());
         all_layers_btn->setVisible(true);
+    }
+
+    void onPlaytest(CCObject* sender) {
+        auto next_free_button = this->getChildByIDRecursive("next-free-layer-button");
+        next_free_button->setVisible(false);
+
+        EditorUI::onPlaytest(sender);
+    }
+};
+
+struct NextFreeEditorLayer : Modify<NextFreeEditorLayer, LevelEditorLayer> {
+    bool init(GJGameLevel* p0, bool p1) {
+        if (!LevelEditorLayer::init(p0, p1)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    void onStopPlaytest() {
+        LevelEditorLayer::onStopPlaytest();
+
+        auto next_free_button = this->m_editorUI->getChildByIDRecursive("next-free-layer-button");
+        next_free_button->setVisible(true);
     }
 };

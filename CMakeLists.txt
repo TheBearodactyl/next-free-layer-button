@@ -3,6 +3,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_OSX_ARCHITECTURES "x86_64")
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+set(GEODE_BINDINGS_REPO_PATH "/Users/thebe/sdks/bindings")
 
 project(next-free-layer VERSION 1.0.0)
 
