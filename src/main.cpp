@@ -1,6 +1,7 @@
-#include "Geode/cocos/cocoa/CCGeometry.h"
-#include "Geode/cocos/menu_nodes/CCMenu.h"
+#include "Geode/modify/Modify.hpp"
 #include <Geode/Geode.hpp>
+#include <Geode/cocos/cocoa/CCGeometry.h>
+#include <Geode/cocos/menu_nodes/CCMenu.h>
 #include <Geode/modify/EditorUI.hpp>
 #include <Geode/modify/LevelEditorLayer.hpp>
 
