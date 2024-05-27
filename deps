@@ -1,0 +1,8 @@
+
+  "dependencies": [
+    {
+      "id": "geode.node-ids",
+      "version": "v1.10.0",
+      "importance": "required"
+    }
+  ]

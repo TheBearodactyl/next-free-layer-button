@@ -1,4 +1,4 @@
-IndentAccessModifiers: true
+IndentAccessModifiers: false
 IndentCaseBlocks: false
 IndentCaseLabels: true
 IndentPPDirectives: AfterHash
@@ -9,5 +9,3 @@ ColumnLimit: 500
 BinPackParameters: true
 PenaltyBreakBeforeFirstCallParameter: 999999
 PointerAlignment: Left
-UseTab: Never
-IndentWidth: 2

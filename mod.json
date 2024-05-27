@@ -1,19 +1,12 @@
 {
-  "geode": "2.0.0-beta.26",
+  "geode": "2.0.0-beta.27",
   "gd": {
     "win": "2.204",
     "android": "2.205"
   },
-  "version": "v1.0.1",
+  "version": "v1.0.2",
   "id": "the_bearodactyl.next-free-layer",
   "name": "next-free-layer",
   "developer": "The Bearodactyl",
-  "description": "Adds a button to the editor to go to the next free editor layer",
-  "dependencies": [
-    {
-      "id": "geode.node-ids",
-      "version": "v1.10.0",
-      "importance": "required"
-    }
-  ]
+  "description": "Adds a button to the editor to go to the next free editor layer"
 }
