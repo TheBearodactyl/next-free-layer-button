@@ -1,0 +1,13 @@
+IndentAccessModifiers: true
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentPPDirectives: AfterHash
+NamespaceIndentation: All
+AlignOperands: AlignAfterOperator
+ReferenceAlignment: Left
+ColumnLimit: 500
+BinPackParameters: true
+PenaltyBreakBeforeFirstCallParameter: 999999
+PointerAlignment: Left
+UseTab: Never
+IndentWidth: 2

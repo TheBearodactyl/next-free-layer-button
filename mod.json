@@ -8,5 +8,12 @@
   "id": "the_bearodactyl.next-free-layer",
   "name": "next-free-layer",
   "developer": "The Bearodactyl",
-  "description": "Adds a button to the editor to go to the next free editor layer"
+  "description": "Adds a button to the editor to go to the next free editor layer",
+  "dependencies": [
+    {
+      "id": "geode.node-ids",
+      "version": "v1.10.0",
+      "importance": "required"
+    }
+  ]
 }
