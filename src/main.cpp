@@ -1,7 +1,4 @@
-#include "Geode/modify/Modify.hpp"
 #include <Geode/Geode.hpp>
-#include <Geode/cocos/cocoa/CCGeometry.h>
-#include <Geode/cocos/menu_nodes/CCMenu.h>
 #include <Geode/modify/EditorUI.hpp>
 #include <Geode/modify/LevelEditorLayer.hpp>
 
@@ -15,6 +12,7 @@ struct NextFreeLayer : Modify<NextFreeLayer, EditorUI> {
 
     CCNode* layer_btn_mnu = this->getChildByIDRecursive("layer-menu");
     CCSprite* next_free_spr = CCSprite::createWithSpriteFrameName("GJ_arrow_02_001.png");
+    float new_layr_pos = layer_btn_mnu->getPositionX() - 10.f;
     next_free_spr->setScale(0.54f);
     next_free_spr->setOpacity(175);
     next_free_spr->setFlipX(true);
@@ -22,13 +20,9 @@ struct NextFreeLayer : Modify<NextFreeLayer, EditorUI> {
     CCMenuItemSpriteExtra* next_free_btn = CCMenuItemSpriteExtra::create(next_free_spr, this, menu_selector(NextFreeLayer::on_next_free));
     next_free_btn->setID("next-free-layer-button");
 
-    float new_x_pos = layer_btn_mnu->getContentSize().width + next_free_btn->getContentSize().width / 2 + 10.f;
-    next_free_btn->setPositionX(new_x_pos);
-
-    layer_btn_mnu->setContentSize(CCSize(layer_btn_mnu->getContentSize().width + next_free_btn->getContentSize().width + 10.f, layer_btn_mnu->getContentSize().height));
     layer_btn_mnu->addChild(next_free_btn);
-
-    dynamic_cast<CCMenu*>(layer_btn_mnu)->alignItemsHorizontallyWithPadding(10.f);
+    layer_btn_mnu->setPositionX(new_layr_pos);
+    layer_btn_mnu->setLayout(RowLayout::create()->setAxisAlignment(AxisAlignment::Center));
 
     return true;
   }
