@@ -1,12 +1,12 @@
 {
   "description": "Adds a button to the editor to go to the next free editor layer",
-  "developer": "The Bearodactyl",
+  "developer": "the_bearodactyl",
   "gd": {
-    "android": "2.205",
-    "win": "2.204"
+    "android": "2.206",
+    "win": "2.206"
   },
-  "geode": "2.0.0-beta.27",
+  "geode": "3.0.0-alpha.1",
   "id": "the_bearodactyl.next-free-layer",
   "name": "next-free-layer",
-  "version": "v1.0.2"
+  "version": "v1.0.3"
 }
