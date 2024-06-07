@@ -68,20 +68,3 @@ struct NextFreeLayer : Modify<NextFreeLayer, EditorUI> {
     EditorUI::onPlaytest(sender);
   }
 };
-
-struct NextFreeEditorLayer : Modify<NextFreeEditorLayer, LevelEditorLayer> {
-  bool init(GJGameLevel* p0, bool p1) {
-    if (!LevelEditorLayer::init(p0, p1)) {
-      return false;
-    }
-
-    return true;
-  }
-
-  void onStopPlaytest() {
-    LevelEditorLayer::onStopPlaytest();
-
-    CCNode* next_free_button = this->m_editorUI->getChildByIDRecursive("next-free-layer-button");
-    next_free_button->setVisible(true);
-  }
-};
